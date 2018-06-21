@@ -1,5 +1,4 @@
 #include "FatMachOBinaryViewType.hpp"
-#include "FatMachOBinaryView.hpp"
 
 struct mach_o_x86_64
 {
