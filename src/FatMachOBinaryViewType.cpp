@@ -108,6 +108,11 @@ bool FatMachOBinaryViewType<ARCH>::IsTypeValidForData(BinaryView* data)
     header.magic = __builtin_bswap32(header.magic);
     header.nfat_arch = __builtin_bswap32(header.nfat_arch);
 
+    if (header.magic != 0xcafebabe)
+    {
+        return false;
+    }
+
     LogDebug("header.magic = %016x", header.magic);
     LogDebug("arch.nfat_arch = %16x", header.nfat_arch);
     fat_arch arch;
