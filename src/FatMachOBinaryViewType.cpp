@@ -1,5 +1,4 @@
 #include "FatMachOBinaryViewType.hpp"
-#include "FatMachOBinaryView.hpp"
 
 struct fat_header
 {
@@ -74,7 +73,8 @@ BinaryView* FatMachOBinaryViewType<ARCH>::Create(BinaryView* data)
     length += arch.align - (length % arch.align);
     DataBuffer fat_data = data->ReadBuffer(arch.offset, length);
     auto parent = NewParentBinaryView(data, fat_data);
-    return new FatMachOBinaryView<ARCH>(ARCH::long_name, data->GetFile(), parent);
+    BNBinaryView* child = BNCreateBinaryViewOfType(BinaryViewType::GetByName("Mach-O")->GetObject(), parent->GetObject());
+    return new BinaryView(child);
 }
 
 template <typename ARCH>
