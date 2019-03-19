@@ -1,8 +1,8 @@
 # Path to prebuilt libbinaryninjaapi.a
-BINJA_API_A := ~/projects/binaryninja-api/bin/libbinaryninjaapi.a
+BINJA_API_A := ~/Documents/Repos/binaryninja-api/bin/libbinaryninjaapi.a
 
 # Path to binaryninjaapi.h and json
-INC := -I/Users/josh/projects/binaryninja-api/
+INC := -I/Users/user/Documents/Repos/binaryninja-api/
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)

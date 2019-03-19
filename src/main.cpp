@@ -1,8 +1,6 @@
 #include "binaryninjaapi.h"
 #include "FatMachOBinaryViewType.hpp"
-
-struct mach_o_x86_64;
-struct mach_o_x86;
+#include "machoTypes.hpp"
 
 extern "C"
 {
