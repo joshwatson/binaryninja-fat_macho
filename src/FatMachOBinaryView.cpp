@@ -1248,3 +1248,5 @@ FatMachOBinaryView<ARCH>::~FatMachOBinaryView() {}
 
 template class FatMachOBinaryView<mach_o_x86_64>;
 template class FatMachOBinaryView<mach_o_x86>;
+template class FatMachOBinaryView<mach_o_aarch64>;
+template class FatMachOBinaryView<mach_o_armv7>;

@@ -121,3 +121,5 @@ bool FatMachOBinaryViewType<ARCH>::IsTypeValidForData(BinaryView* data)
 
 template class FatMachOBinaryViewType<mach_o_x86_64>;
 template class FatMachOBinaryViewType<mach_o_x86>;
+template class FatMachOBinaryViewType<mach_o_aarch64>;
+template class FatMachOBinaryViewType<mach_o_armv7>;
