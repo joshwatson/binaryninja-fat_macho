@@ -16,6 +16,7 @@ extern "C"
         BinaryViewType::Register(new FatMachOBinaryViewType<mach_o_x86>());
         BinaryViewType::Register(new FatMachOBinaryViewType<mach_o_aarch64>());
         BinaryViewType::Register(new FatMachOBinaryViewType<mach_o_armv7>());
+        BinaryViewType::Register(new FatMachOBinaryViewType<mach_o_ppc>());
         return true;
     }
 }
