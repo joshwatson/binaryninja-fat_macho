@@ -22,7 +22,7 @@ struct mach_o_x86_64
     static const std::string name;
     static const std::string long_name;
     static const cpu_type_t cputype = CPU_TYPE_X86_64;
-    static const cpu_subtype_t cpusubtype = CPU_X86_64_ALL;
+    static const cpu_subtype_t cpusubtype = CPU_SUBTYPE_X86_64_ALL;
 };
 
 struct mach_o_x86
@@ -30,7 +30,7 @@ struct mach_o_x86
     static const std::string name;
     static const std::string long_name;
     static const cpu_type_t cputype = CPU_TYPE_X86;
-    static const cpu_type_t cpusubtype = CPU_X86_ALL;
+    static const cpu_type_t cpusubtype = CPU_SUBTYPE_X86_ALL;
 };
 
 struct mach_o_aarch64
