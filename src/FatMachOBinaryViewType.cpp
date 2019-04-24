@@ -56,13 +56,13 @@ BinaryView* FatMachOBinaryViewType<ARCH>::Create(BinaryView* data)
 
         LogDebug("arch.cputype %08x", arch.cputype);
 
-        if (arch.cputype == ARCH::cputype)
+        if (arch.cputype == ARCH::cputype && arch.cpusubtype == ARCH::cpusubtype)
         {
             break;
         }
     }
 
-    if (arch.cputype != ARCH::cputype)
+    if (arch.cputype != ARCH::cputype || arch.cpusubtype != ARCH::cpusubtype)
     {
         LogDebug("Couldn't find arch");
         // couldn't find it
@@ -93,8 +93,8 @@ bool FatMachOBinaryViewType<ARCH>::IsTypeValidForData(BinaryView* data)
         return false;
     }
 
-    LogDebug("header.magic = %016x", header.magic);
-    LogDebug("arch.nfat_arch = %16x", header.nfat_arch);
+    LogDebug("header.magic = %08x", header.magic);
+    LogDebug("arch.nfat_arch = %08x", header.nfat_arch);
     fat_arch arch;
     for (unsigned long i = 0; i < header.nfat_arch; i++)
     {
@@ -110,13 +110,13 @@ bool FatMachOBinaryViewType<ARCH>::IsTypeValidForData(BinaryView* data)
 
         LogDebug("arch.cputype %08x", arch.cputype);
 
-        if (arch.cputype == ARCH::cputype)
+        if (arch.cputype == ARCH::cputype && arch.cpusubtype == ARCH::cpusubtype)
         {
             break;
         }
     }
 
-    return arch.cputype == ARCH::cputype;
+    return (arch.cputype == ARCH::cputype && arch.cpusubtype == ARCH::cpusubtype);
 }
 
 template class FatMachOBinaryViewType<mach_o_x86_64>;
