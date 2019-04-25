@@ -7,8 +7,8 @@ I haven't tested this on anything but MacOS, but there is no reason why it shoul
 
 # Building
 ## Requirements
-`libbinaryninja.a` built from [binaryninja-api](https://github.com/vector35/binaryninja-api)
-Binary Ninja (note: support for this plugin is currently only on the development channel; it does not work on stable yet)
+* `libbinaryninja.a` built from [binaryninja-api](https://github.com/vector35/binaryninja-api)
+* Binary Ninja (note: support for this plugin is currently only on the development channel; it does not work on stable yet)
 
 ## Building
 1. Update the first two variables in `Makefile` to reflect the locations of your `libbinaryninja.a` and `binaryninjaapi.h`
