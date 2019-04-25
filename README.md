@@ -33,7 +33,7 @@ This will copy `libfat_macho.dylib` into your Binary Ninja plugins directory.
 Open a Fat Mach-O binary. If any of the contained architectures are supported, one of them will be displayed immediately.
 
 You can choose a different contained Mach-O using the bottom right menu:
-[!img](images/menu.png)
+![](images/menu.png)
 
 # Acknowledgements
 Thanks to @melomac for [adding support for arm and ppc](https://github.com/joshwatson/binaryninja-fat_macho/pull/2)!
