@@ -1,5 +1,5 @@
 # Fat Mach-O BinaryView for Binary Ninja
-
+# This plugin's features are now integrated into the Binary Ninja core and therefore is deprecated.
 This Binary Ninja plugin extends the Mach-O BinaryView to support Fat Mach-O files.
 
 # Supported Platforms
